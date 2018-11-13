@@ -2,12 +2,6 @@
 ##########################
 SourceControlGenerator.json
 
-# Levels
-######################
-Mods/CheatCommander_ccb5167c-6c69-4132-8aa9-1ab6618af35b/Levels/*
-Mods/CheatCommander_ccb5167c-6c69-4132-8aa9-1ab6618af35b/Globals/*
-Editor/Mods/CheatCommander_ccb5167c-6c69-4132-8aa9-1ab6618af35b/Levels/*
-
 # Story files        #
 ######################
 *.div
