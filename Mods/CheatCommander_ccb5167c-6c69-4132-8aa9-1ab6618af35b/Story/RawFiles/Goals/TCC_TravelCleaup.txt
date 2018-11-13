@@ -1,0 +1,127 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+// Help the global npc travel to the intended spawn point on region loads and events
+// CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d
+
+//REGION Tutorial
+
+// To the tutorial ship entrance if in tutorial
+IF
+RegionStarted("TUT_Tutorial_A")
+THEN
+TeleportTo(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, TRIGGERGUID_S_TCC_TUT_SpawnPoint_82d81b49-ff63-4264-baec-3da33f4b9585);
+SetOnStage(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+CharacterSetImmortal(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+
+//END_REGION
+
+//REGION Fort Joy
+
+// To fort joy beach if in act 1
+IF
+RegionStarted("FJ_FortJoy_Main")
+THEN
+TeleportTo(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, TRIGGERGUID_S_TCC_FJ_SpawnPoint_b95751f6-9840-4803-9969-83dc56fc6aaf);
+SetOnStage(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+CharacterSetImmortal(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+
+//END_REGION
+
+//REGION High Seas Entry
+
+// To pre-fight lady veng ship if assault not started eoa1
+IF
+RegionStarted("LV_HoE_Main")
+AND
+GlobalGetFlag("FTJ_LV_BeginLVAssault", 0)
+THEN
+TeleportTo(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, TRIGGERGUID_S_TCC_HoE_Sea_SpawnPoint_eacef20b-768d-4393-b330-60769e9f5d01);
+SetOnStage(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+CharacterSetImmortal(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+
+//END_REGION
+
+//REGION High Seas Assault
+
+// To post-fight lady veng after assault begins eoa1
+IF
+RegionStarted("LV_HoE_Main")
+AND
+GlobalGetFlag("FTJ_LV_BeginLVAssault", 1)
+THEN
+TeleportTo(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, TRIGGERGUID_S_TCC_HoE_Halls_SpawnPoint_777524fb-0ea3-429e-a217-40bf41567ffe);
+SetOnStage(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+CharacterSetImmortal(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+
+// When assault begins in lady veng force to post-fight phase eoa1
+IF
+GlobalFlagSet("FTJ_LV_BeginLVAssault")
+THEN
+TeleportTo(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, TRIGGERGUID_S_TCC_HoE_Halls_SpawnPoint_777524fb-0ea3-429e-a217-40bf41567ffe);
+SetOnStage(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+CharacterSetImmortal(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+
+//END_REGION
+
+//REGION Reapers Coast
+
+// To reapers coast act 2
+IF
+RegionStarted("RC_Main")
+THEN
+TeleportTo(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, TRIGGERGUID_S_TCC_RC_SpawnPoint_cb723c64-f0b8-43c4-acf7-cb31732df86d);
+SetOnStage(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+CharacterSetImmortal(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+
+//END_REGION
+
+//REGION Nameless Isle
+
+// To nameless isle act 3
+IF
+RegionStarted("CoS_Main")
+THEN
+TeleportTo(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, TRIGGERGUID_S_TCC_CoS_SpawnPoint_42a9d38b-b887-4aba-960b-0d8bc917d8d6);
+SetOnStage(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+CharacterSetImmortal(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+
+//END_REGION
+
+//REGION Arx
+
+// To arx act 4 halls if unlocked
+IF
+RegionStarted("ARX_Main")
+AND
+GlobalGetFlag("ARX_LV_HoE_WaypointUnlock", 1)
+THEN
+TeleportTo(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, TRIGGERGUID_S_TCC_ARX_Halls_SpawnPoint_1e512409-f009-496b-9f94-691997db07ba);
+SetOnStage(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+CharacterSetImmortal(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+
+// If halls unlocked send to arx halls
+IF
+GlobalFlagSet("ARX_LV_HoE_WaypointUnlock")
+THEN
+TeleportTo(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, TRIGGERGUID_S_TCC_ARX_Halls_SpawnPoint_1e512409-f009-496b-9f94-691997db07ba);
+SetOnStage(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+CharacterSetImmortal(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+
+// To arx pilgrim camp if halls not unlocked act 4
+IF
+RegionStarted("ARX_Main")
+AND
+GlobalGetFlag("ARX_LV_HoE_WaypointUnlock", 0)
+THEN
+TeleportTo(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, TRIGGERGUID_S_TCC_ARX_Camp_SpawnPoint_c1f94aaf-7553-49bf-8f0d-465285203965);
+SetOnStage(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+CharacterSetImmortal(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "TCC_CheatCommanderContainer"

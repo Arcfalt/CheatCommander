@@ -1,0 +1,38 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+TCCMain_Internal_CompleteIfStarted(); // Start in existing saves
+KBSECTION
+// Mod activator
+PROC
+TCCMain_Internal_Start()
+THEN
+DebugBreak("[TCCMain] TCCMain parent goal completed.");
+GoalCompleted;
+
+// Game started activation event
+IF
+GameEventSet("GAMEEVENT_GameStarted")
+THEN
+TCCMain_Internal_Start();
+
+// Extsing save with no mod activation event
+PROC
+TCCMain_Internal_CompleteIfStarted()
+AND
+DB_StoryStarted(_)
+THEN
+DebugBreak("[TCCMain:CompleteIfStarted] Existing save detected. Starting TCCMain.");
+TCCMain_Internal_Start();
+
+// Event for saves where this goal is active, but wasn't completed somehow
+IF
+SavegameLoaded(_,_,_,_)
+AND
+DB_StoryStarted(_)
+THEN
+DebugBreak("[TCCMain:SavegameLoaded] Existing save detected. Starting TCCMain.");
+TCCMain_Internal_Start();
+EXITSECTION
+
+ENDEXITSECTION

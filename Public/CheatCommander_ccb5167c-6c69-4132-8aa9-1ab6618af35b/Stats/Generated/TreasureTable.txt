@@ -1,0 +1,7 @@
+treasure itemtypes "Common","Uncommon","Rare","Epic","Legendary","Divine","Unique"
+new treasuretable "TCC_TradeStats"
+new subtable "3,1"
+object category "T_Equip",1,0,0,0,1,0,0,0
+new treasuretable "TCC_Gold"
+new subtable "10,1"
+object category "Trader Gold",1,0,0,0,0,0,0,0

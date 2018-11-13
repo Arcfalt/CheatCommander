@@ -1,0 +1,40 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+// Add a cheat book to player inventories if they don't have one when they are added to the game
+IF
+DB_IsPlayer(_Player)
+AND
+CharacterGetItemTemplateCount(_Player, "TCC_ITM_TheCheatBook_9a863145-a9e8-4f9d-8432-a1762d5c9ee1", 0)
+THEN
+ItemTemplateAddTo("TCC_ITM_TheCheatBook_9a863145-a9e8-4f9d-8432-a1762d5c9ee1", _Player, 1);
+
+// Create a new temp cheat commander when the summon book is used
+// Mark the summoned commander into the temp commander list for deletion post-dialog
+IF
+CharacterUsedItemTemplate(_Player, "TCC_ITM_TheCheatBook_9a863145-a9e8-4f9d-8432-a1762d5c9ee1", _Item)
+AND
+GetPosition(_Player, _PX, _PY, _PZ)
+AND
+TemporaryCharacterCreateAtPosition(_PX, _PY, _PZ, "TCC_NPC_TheCheatCommander_ddc51890-62f5-4d06-96d9-e73399c0b829", 0, _Commander)
+THEN
+DB_TCCMain_TempCommanders(_Commander);
+Proc_StartDialog(0,"TCC_DLG_TheCheatCommander",_Commander,_Player);
+
+// When a cheat commander dialog completed, remove the commander if he's a temp summoned one
+// This is then handled by a script attached to the cheat commander npc
+IF
+DialogEnded("TCC_DLG_TheCheatCommander", _DialogInstance)
+AND
+DialogGetInvolvedNPC(_DialogInstance,1,(CHARACTERGUID)_Actor)
+AND
+DB_TCCMain_TempCommanders(_Actor)
+THEN
+NOT DB_TCCMain_TempCommanders(_Actor);
+UserSetFlag(_Actor,"remove_temp_tcc_npc");
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "TCC_CheatCommanderContainer"

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1512561621" />
+    <version major="3" minor="1" revision="5" build="0" />
+    <region id="IconUVList">
+        <node id="root">
+            <children>
+                <node id="IconUV">
+                    <attribute id="MapKey" value="77411064-0317-40ca-9bae-b9db9240e276_11245813870990462024-GEN_Magister_Melee_Staff_(Icon_Elf_Male)" type="22" />
+                    <attribute id="U1" value="0.00195313" type="6" />
+                    <attribute id="U2" value="0.310547" type="6" />
+                    <attribute id="V1" value="0.00390625" type="6" />
+                    <attribute id="V2" value="0.777344" type="6" />
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" value="77411064-0317-40ca-9bae-b9db9240e276_11245813870990462024-GEN_Magister_Melee_Staff_(Icon_TCC_Main)" type="22" />
+                    <attribute id="U1" value="0.314453" type="6" />
+                    <attribute id="U2" value="0.623047" type="6" />
+                    <attribute id="V1" value="0.00390625" type="6" />
+                    <attribute id="V2" value="0.777344" type="6" />
+                </node>
+            </children>
+        </node>
+    </region>
+    <region id="TextureAtlasInfo">
+        <node id="root">
+            <children>
+                <node id="TextureAtlasIconSize">
+                    <attribute id="Height" value="100" type="4" />
+                    <attribute id="Width" value="80" type="4" />
+                </node>
+                <node id="TextureAtlasPath">
+                    <attribute id="Path" value="Public/CheatCommander_ccb5167c-6c69-4132-8aa9-1ab6618af35b/Assets/Textures/Icons/Generated_ccb5167c-6c69-4132-8aa9-1ab6618af35b_Icons.dds" type="29" />
+                    <attribute id="UUID" value="607164eb-e5b9-4589-977b-17d803a303f1" type="22" />
+                </node>
+                <node id="TextureAtlasTextureSize">
+                    <attribute id="Height" value="128" type="4" />
+                    <attribute id="Width" value="256" type="4" />
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

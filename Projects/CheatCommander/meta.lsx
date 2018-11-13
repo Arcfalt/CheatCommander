@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1534830897" />
+    <version major="3" minor="6" revision="0" build="3" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="48cb4f59-b33f-d55d-4b84-d671e9f2f74d" type="23" />
+            <attribute id="Name" value="CheatCommander" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="38d62f6a-4f7b-4189-b8c4-74db2a6a4dad" type="23" />
+        </node>
+    </region>
+</save>

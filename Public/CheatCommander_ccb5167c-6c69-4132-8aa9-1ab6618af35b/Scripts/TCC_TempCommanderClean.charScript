@@ -1,0 +1,9 @@
+INIT
+	CHARACTER:__Me
+	
+EVENTS
+EVENT HandleTempCommanderCleanup
+ON
+	OnCharacterFlagSet("remove_temp_tcc_npc",__Me)
+ACTIONS	
+	CharacterDestroy(__Me)

@@ -1,0 +1,430 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+//REGION Add Gold Cheats
+
+IF
+ObjectFlagSet("TCC_Cheat_AddGold100", _speaker, _)
+THEN
+CharacterAddGold((CHARACTERGUID)_speaker, 100);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddGold100");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddGold1000", _speaker, _)
+THEN
+CharacterAddGold((CHARACTERGUID)_speaker, 1000);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddGold1000");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddGold10000", _speaker, _)
+THEN
+CharacterAddGold((CHARACTERGUID)_speaker, 10000);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddGold10000");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddGold50000", _speaker, _)
+THEN
+CharacterAddGold((CHARACTERGUID)_speaker, 50000);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddGold50000");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddGold99999", _speaker, _)
+THEN
+CharacterAddGold((CHARACTERGUID)_speaker, 99999);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddGold99999");
+
+//END_REGION
+
+//REGION Add XP Cheats
+
+IF
+ObjectFlagSet("TCC_Cheat_AddXP1000", _speaker, _)
+THEN
+PartyAddActualExperience((CHARACTERGUID)_speaker, 1000);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddXP1000");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddXP5000", _speaker, _)
+THEN
+PartyAddActualExperience((CHARACTERGUID)_speaker, 5000);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddXP5000");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddXP10000", _speaker, _)
+THEN
+PartyAddActualExperience((CHARACTERGUID)_speaker, 10000);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddXP10000");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddXP50000", _speaker, _)
+THEN
+PartyAddActualExperience((CHARACTERGUID)_speaker, 50000);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddXP50000");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddXP100000", _speaker, _)
+THEN
+PartyAddActualExperience((CHARACTERGUID)_speaker, 100000);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddXP100000");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddXP500000", _speaker, _)
+THEN
+PartyAddActualExperience((CHARACTERGUID)_speaker, 500000);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddXP500000");
+
+//END_REGION
+
+//REGION Level Up To X Cheats
+
+IF
+ObjectFlagSet("TCC_Cheat_LevelUpTo5", _speaker, _)
+THEN
+CharacterLevelUpTo((CHARACTERGUID)_speaker, 5);
+ObjectClearFlag(_speaker, "TCC_Cheat_LevelUpTo5");
+
+IF
+ObjectFlagSet("TCC_Cheat_LevelUpTo10", _speaker, _)
+THEN
+CharacterLevelUpTo((CHARACTERGUID)_speaker, 10);
+ObjectClearFlag(_speaker, "TCC_Cheat_LevelUpTo10");
+
+IF
+ObjectFlagSet("TCC_Cheat_LevelUpTo15", _speaker, _)
+THEN
+CharacterLevelUpTo((CHARACTERGUID)_speaker, 15);
+ObjectClearFlag(_speaker, "TCC_Cheat_LevelUpTo15");
+
+IF
+ObjectFlagSet("TCC_Cheat_LevelUpTo20", _speaker, _)
+THEN
+CharacterLevelUpTo((CHARACTERGUID)_speaker, 20);
+ObjectClearFlag(_speaker, "TCC_Cheat_LevelUpTo20");
+
+IF
+ObjectFlagSet("TCC_Cheat_LevelUpTo25", _speaker, _)
+THEN
+CharacterLevelUpTo((CHARACTERGUID)_speaker, 25);
+ObjectClearFlag(_speaker, "TCC_Cheat_LevelUpTo25");
+
+IF
+ObjectFlagSet("TCC_Cheat_LevelUpTo30", _speaker, _)
+THEN
+CharacterLevelUpTo((CHARACTERGUID)_speaker, 30);
+ObjectClearFlag(_speaker, "TCC_Cheat_LevelUpTo30");
+
+//END_REGION
+
+//REGION Equipment Cheats
+
+IF
+ObjectFlagSet("TCC_Cheat_EQAllLegendary", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "EquipLegendary");
+ObjectClearFlag(_speaker, "TCC_Cheat_EQAllLegendary");
+
+//END_REGION
+
+//REGION Misc Add Item Cheats
+
+IF
+ObjectFlagSet("TCC_Cheat_AddLockpick20", _speaker, _)
+THEN
+ItemTemplateAddTo("TOOL_LockPick_A_06d0eecb-4271-42a7-bd8c-4cbf24927197", _speaker, 20, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddLockpick20");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddShovel", _speaker, _)
+THEN
+ItemTemplateAddTo("TOOL_Shovel_A_41486dd2-3fd5-464e-870e-844120cf0517", _speaker, 1, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddShovel");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddPurgingWand", _speaker, _)
+THEN
+ItemTemplateAddTo("WPN_Wand_Purging_2b4412a5-467a-44ae-9d7b-bf39a06794b2", _speaker, 1, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddPurgingWand");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddBasicRunes", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatRuneCombinations");
+ObjectClearFlag(_speaker, "TCC_Cheat_AddBasicRunes");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddSpecialRunes", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatRuneFraming");
+ObjectClearFlag(_speaker, "TCC_Cheat_AddSpecialRunes");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddArtifactA", _speaker, _)
+THEN
+ItemTemplateAddTo("LOOT_AtaraxianArtifacts_A_629fdb6d-a88e-4a62-83a7-c4f4b3655d81", _speaker, 1, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddArtifactA");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddArtifactC", _speaker, _)
+THEN
+ItemTemplateAddTo("LOOT_AtaraxianArtifacts_C_ad6f95cf-8280-43d7-b329-7bdf7689d6a7", _speaker, 1, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddArtifactC");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddSwornbreaker", _speaker, _)
+THEN
+ItemTemplateAddTo("WPN_Ataraxians_Scythe_2H_A_3b45c978-5a42-40b5-a7aa-183852616910", _speaker, 1, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddSwornbreaker");
+
+IF
+ObjectFlagSet("TCC_Cheat_AddExtraCheatBook", _speaker, _)
+THEN
+ItemTemplateAddTo("TCC_ITM_TheCheatBook_9a863145-a9e8-4f9d-8432-a1762d5c9ee1", _speaker, 1, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_AddExtraCheatBook");
+
+//END_REGION
+
+//REGION Skillbook Cheats
+
+IF
+ObjectFlagSet("TCC_Cheat_SBFire", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatBooksFire");
+ObjectClearFlag(_speaker, "TCC_Cheat_SBFire");
+
+IF
+ObjectFlagSet("TCC_Cheat_SBWater", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatBooksWater");
+ObjectClearFlag(_speaker, "TCC_Cheat_SBWater");
+
+IF
+ObjectFlagSet("TCC_Cheat_SBAir", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatBooksAir");
+ItemTemplateAddTo("BOOK_Skill_Air_Apportation_bb4242cd-2866-4279-849d-fbaceb3c7746", _speaker, 1, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_SBAir");
+
+IF
+ObjectFlagSet("TCC_Cheat_SBEarth", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatBooksEarth");
+ItemTemplateAddTo("BOOK_Skill_Earth_Fortify_cb963736-247a-4f39-94a1-5144c6851598", _speaker, 1, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_SBEarth");
+
+IF
+ObjectFlagSet("TCC_Cheat_SBNecromancy", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatBooksNecromancy");
+ObjectClearFlag(_speaker, "TCC_Cheat_SBNecromancy");
+
+IF
+ObjectFlagSet("TCC_Cheat_SBRanger", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatBooksRanger");
+ObjectClearFlag(_speaker, "TCC_Cheat_SBRanger");
+
+IF
+ObjectFlagSet("TCC_Cheat_SBRogue", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatBooksRogue");
+ObjectClearFlag(_speaker, "TCC_Cheat_SBRogue");
+
+IF
+ObjectFlagSet("TCC_Cheat_SBWarrior", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatBooksWarrior");
+ObjectClearFlag(_speaker, "TCC_Cheat_SBWarrior");
+
+IF
+ObjectFlagSet("TCC_Cheat_SBSummoning", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatBooksSummoning");
+ItemTemplateAddTo("BOOK_Skill_Summoning_InnerDemon_7c1d4c29-5e16-4fc3-8ee0-afe771fbd367", _speaker, 1, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_SBSummoning");
+
+IF
+ObjectFlagSet("TCC_Cheat_SBPolymorph", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatBooksPolymorph");
+ObjectClearFlag(_speaker, "TCC_Cheat_SBPolymorph");
+
+IF
+ObjectFlagSet("TCC_Cheat_SBSkillcrafting", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatBooksSkillcrafting");
+ItemTemplateAddTo("BOOK_Skill_Water_CleanseWounds_9def4e2e-e1bd-4a32-82b8-02b5b26a88a0", _speaker, 1, 1);
+ItemTemplateAddTo("BOOK_Skill_Water_MassCleanseWounds_c05fe2f6-ff5e-4a4d-8ff3-8172bdfcae33", _speaker, 1, 1);
+ItemTemplateAddTo("BOOK_Skill_Water_BloodStorm_4fd6849b-b2cb-416b-9094-05c55d56c88e", _speaker, 1, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_SBSkillcrafting");
+
+IF
+ObjectFlagSet("TCC_Cheat_SBAll", _speaker, _)
+THEN
+CharacterGiveReward((CHARACTERGUID)_speaker, "CheatBooks");
+ItemTemplateAddTo("BOOK_Skill_Air_Apportation_bb4242cd-2866-4279-849d-fbaceb3c7746", _speaker, 1, 1);
+ItemTemplateAddTo("BOOK_Skill_Earth_Fortify_cb963736-247a-4f39-94a1-5144c6851598", _speaker, 1, 1);
+ItemTemplateAddTo("BOOK_Skill_Summoning_InnerDemon_7c1d4c29-5e16-4fc3-8ee0-afe771fbd367", _speaker, 1, 1);
+ItemTemplateAddTo("BOOK_Skill_Water_CleanseWounds_9def4e2e-e1bd-4a32-82b8-02b5b26a88a0", _speaker, 1, 1);
+ItemTemplateAddTo("BOOK_Skill_Water_MassCleanseWounds_c05fe2f6-ff5e-4a4d-8ff3-8172bdfcae33", _speaker, 1, 1);
+ItemTemplateAddTo("BOOK_Skill_Water_BloodStorm_4fd6849b-b2cb-416b-9094-05c55d56c88e", _speaker, 1, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_SBAll");
+
+//END_REGION
+
+//REGION Stat Cheats
+
+IF
+ObjectFlagSet("TCC_Cheat_SAttribute2", _speaker, _)
+THEN
+CharacterAddAttributePoint((CHARACTERGUID)_speaker, 2);
+ObjectClearFlag(_speaker, "TCC_Cheat_SAttribute2");
+
+IF
+ObjectFlagSet("TCC_Cheat_SAbility1", _speaker, _)
+THEN
+CharacterAddAbilityPoint((CHARACTERGUID)_speaker, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_SAbility1");
+
+IF
+ObjectFlagSet("TCC_Cheat_STalent1", _speaker, _)
+THEN
+CharacterAddTalentPoint((CHARACTERGUID)_speaker, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_STalent1");
+
+IF
+ObjectFlagSet("TCC_Cheat_SCivil1", _speaker, _)
+THEN
+CharacterAddCivilAbilityPoint((CHARACTERGUID)_speaker, 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_SCivil1");
+
+//END_REGION
+
+//REGION Tag Cheats
+
+IF
+ObjectFlagSet("TCC_Cheat_TagBARBARIAN", _speaker, _)
+THEN
+SetTag(_speaker, "BARBARIAN");
+ObjectClearFlag(_speaker, "TCC_Cheat_TagBARBARIAN");
+
+IF
+ObjectFlagSet("TCC_Cheat_TagJESTER", _speaker, _)
+THEN
+SetTag(_speaker, "JESTER");
+ObjectClearFlag(_speaker, "TCC_Cheat_TagJESTER");
+
+IF
+ObjectFlagSet("TCC_Cheat_TagMYSTIC", _speaker, _)
+THEN
+SetTag(_speaker, "MYSTIC");
+ObjectClearFlag(_speaker, "TCC_Cheat_TagMYSTIC");
+
+IF
+ObjectFlagSet("TCC_Cheat_TagNOBLE", _speaker, _)
+THEN
+SetTag(_speaker, "NOBLE");
+ObjectClearFlag(_speaker, "TCC_Cheat_TagNOBLE");
+
+IF
+ObjectFlagSet("TCC_Cheat_TagOUTLAW", _speaker, _)
+THEN
+SetTag(_speaker, "OUTLAW");
+ObjectClearFlag(_speaker, "TCC_Cheat_TagOUTLAW");
+
+IF
+ObjectFlagSet("TCC_Cheat_TagSOLDIER", _speaker, _)
+THEN
+SetTag(_speaker, "SOLDIER");
+ObjectClearFlag(_speaker, "TCC_Cheat_TagSOLDIER");
+
+IF
+ObjectFlagSet("TCC_Cheat_TagSCHOLAR", _speaker, _)
+THEN
+SetTag(_speaker, "SCHOLAR");
+ObjectClearFlag(_speaker, "TCC_Cheat_TagSCHOLAR");
+
+IF
+ObjectFlagSet("TCC_Cheat_TagHERO", _speaker, _)
+THEN
+SetTag(_speaker, "HERO");
+ObjectClearFlag(_speaker, "TCC_Cheat_TagHERO");
+
+IF
+ObjectFlagSet("TCC_Cheat_TagVILLAIN", _speaker, _)
+THEN
+SetTag(_speaker, "VILLAIN");
+ObjectClearFlag(_speaker, "TCC_Cheat_TagVILLAIN");
+
+//END_REGION
+
+//REGION Old Civil Cheats
+
+IF
+ObjectFlagSet("TCC_Cheat_CBartering", _speaker, _)
+THEN
+CharacterAddAbility((CHARACTERGUID)_speaker, "Barter", 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_CBartering");
+
+IF
+ObjectFlagSet("TCC_Cheat_CLuckyCharm", _speaker, _)
+THEN
+CharacterAddAbility((CHARACTERGUID)_speaker, "Luck", 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_CLuckyCharm");
+
+IF
+ObjectFlagSet("TCC_Cheat_CPersuasion", _speaker, _)
+THEN
+CharacterAddAbility((CHARACTERGUID)_speaker, "Persuasion", 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_CPersuasion");
+
+IF
+ObjectFlagSet("TCC_Cheat_CLoremaster", _speaker, _)
+THEN
+CharacterAddAbility((CHARACTERGUID)_speaker, "Loremaster", 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_CLoremaster");
+
+IF
+ObjectFlagSet("TCC_Cheat_CTelekinesis", _speaker, _)
+THEN
+CharacterAddAbility((CHARACTERGUID)_speaker, "Telekinesis", 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_CTelekinesis");
+
+IF
+ObjectFlagSet("TCC_Cheat_CSneaking", _speaker, _)
+THEN
+CharacterAddAbility((CHARACTERGUID)_speaker, "Sneaking", 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_CSneaking");
+
+IF
+ObjectFlagSet("TCC_Cheat_CThievery", _speaker, _)
+THEN
+CharacterAddAbility((CHARACTERGUID)_speaker, "Thievery", 1);
+ObjectClearFlag(_speaker, "TCC_Cheat_CThievery");
+
+//END_REGION
+
+//REGION Trading Overrides
+
+IF
+ObjectFlagSet("TCC_Cheat_RestockTrade", (CHARACTERGUID)_Player, _Instance)
+AND
+DB_DialogNPCs(_Instance, _Npc, 1)
+THEN
+DoGenTradeItems((CHARACTERGUID)_Player, (CHARACTERGUID)_Npc);
+ObjectClearFlag(_Player, "TCC_Cheat_RestockTrade", _Instance);
+
+IF
+ObjectFlagSet("TCC_Cheat_LikeMe", (CHARACTERGUID)_Player, _Instance)
+AND
+DB_DialogNPCs(_Instance, _Npc, 1)
+THEN
+CharacterAddAttitudeTowardsPlayer((CHARACTERGUID)_Npc, (CHARACTERGUID)_Player, 500);
+ObjectClearFlag(_Player, "TCC_Cheat_LikeMe", _Instance);
+
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "TCC_CheatCommanderContainer"

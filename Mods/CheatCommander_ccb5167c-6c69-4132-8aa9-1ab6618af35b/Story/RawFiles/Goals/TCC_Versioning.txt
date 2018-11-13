@@ -1,0 +1,30 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+// Ensure the global NPC is not dead and force to immortal each load
+IF
+SavegameLoaded(_,_,_,_)
+AND
+CharacterIsDead(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1)
+THEN
+CharacterResurrect(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d);
+CharacterSetImmortal(CHARACTERGUID_S_GLO_TCC_NewCommander_85d8e45c-f98d-41a0-a27c-1ad9802f2f2d, 1);
+
+// Make sure players have a book on existing saves
+IF
+SavegameLoaded(_,_,_,_)
+AND
+NOT DB_TCCMain_ExistingSaveBook(1)
+AND
+DB_IsPlayer(_Player)
+AND
+CharacterGetItemTemplateCount(_Player, "TCC_ITM_TheCheatBook_9a863145-a9e8-4f9d-8432-a1762d5c9ee1", 0)
+THEN
+ItemTemplateAddTo("TCC_ITM_TheCheatBook_9a863145-a9e8-4f9d-8432-a1762d5c9ee1", _Player, 1);
+DB_TCCMain_ExistingSaveBook(1);
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "TCC_CheatCommanderContainer"
