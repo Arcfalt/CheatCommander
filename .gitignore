@@ -13,11 +13,6 @@ Editor/Mods/CheatCommander_ccb5167c-6c69-4132-8aa9-1ab6618af35b/Levels/*
 *.div
 *.raw
 
-# Asset Folders      #
-######################
-Public/CheatCommander_ccb5167c-6c69-4132-8aa9-1ab6618af35b/Assets/*
-#Public/CheatCommander_ccb5167c-6c69-4132-8aa9-1ab6618af35b/GUI/*
-
 # Editor files       #
 ######################
 RootTemplateSelectorConfig_*
@@ -29,23 +24,6 @@ EditorBrowserMetadata_*
 EditorBrowserMetadata.xml
 Autosave/*
 Recovered/*
-
-# Assets             #
-######################
-*.gr2
-*.dae
-*.swf
-*.bullet
-*.dds
-*.tga
-*.png
-*.ttf
-*.lsb
-*.lsf
-*.lsfx
-*.lsefx
-#*.lsx
-*.lsmg
 
 # Logs               #
 ######################
