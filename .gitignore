@@ -28,21 +28,6 @@ errors.txt
 dialoglog.txt
 personallog.txt
 
-# Binary Files       #
-######################
-*.dat
-*.data
-*.bik
-*.bnk
-*.bshd
-*.cur
-*.fnt
-*.iggy
-*.iggytex
-*.osi
-*.patch
-*.tmpl
-
 # Dump files         #
 ######################
 *.stackdump
