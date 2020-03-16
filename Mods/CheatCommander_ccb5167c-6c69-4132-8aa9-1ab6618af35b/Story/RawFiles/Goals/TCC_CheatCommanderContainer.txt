@@ -7,7 +7,6 @@ KBSECTION
 PROC
 TCCMain_Internal_Start()
 THEN
-DebugBreak("[TCCMain] TCCMain parent goal completed.");
 GoalCompleted;
 
 // Game started activation event
@@ -22,7 +21,6 @@ TCCMain_Internal_CompleteIfStarted()
 AND
 DB_StoryStarted(_)
 THEN
-DebugBreak("[TCCMain:CompleteIfStarted] Existing save detected. Starting TCCMain.");
 TCCMain_Internal_Start();
 
 // Event for saves where this goal is active, but wasn't completed somehow
@@ -31,7 +29,6 @@ SavegameLoaded(_,_,_,_)
 AND
 DB_StoryStarted(_)
 THEN
-DebugBreak("[TCCMain:SavegameLoaded] Existing save detected. Starting TCCMain.");
 TCCMain_Internal_Start();
 EXITSECTION
 
